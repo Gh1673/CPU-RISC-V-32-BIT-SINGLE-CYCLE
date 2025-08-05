@@ -1,0 +1,14 @@
+addi x3, x0, 5  # Gán giá trị 5 cho thanh ghi x3
+addi x4, x0, 5  # Gán giá trị 5 cho thanh ghi x4
+
+# LENH BEQ
+beq x3, x4, label_beq  # Nếu x3 bằng x4, nhảy đến nhãn label_beq
+
+addi x5, x0, 1         # Nếu không nhảy, gán giá trị 1 cho x5
+j end_label            # Nhảy đến nhãn end_label
+
+label_beq:
+addi x5, x0, 2         # Nếu nhảy đến đây (tức là x3 = x4), gán giá trị 2 cho x5
+
+end_label:
+nop                    # Không làm gì (dùng để đánh dấu cuối chương trình)

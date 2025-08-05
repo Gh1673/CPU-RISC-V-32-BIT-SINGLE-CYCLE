@@ -1,0 +1,25 @@
+addi x3, x0, 7  # Gán giá trị 7 cho thanh ghi x3
+addi x6, x3, 5  # Cộng giá trị của x3 và 5, kết quả lưu vào x6 (x6 = x3 + 5)
+xori x6, x3, 5  # XOR (hoặc khác) giữa x3 và 5, kết quả lưu vào x6 (x6 = x3 XOR 5)
+ori  x6, x3, 5  # OR (hoặc) giữa x3 và 5, kết quả lưu vào x6 (x6 = x3 OR 5)
+andi x6, x3, 5  # AND (và) giữa x3 và 5, kết quả lưu vào x6 (x6 = x3 AND 5)
+slli x6, x3, 5  # Dịch trái x3 5 bit, kết quả lưu vào x6 (x6 = x3 << 5)
+srli x6, x3, 5  # Dịch phải logic x3 5 bit, kết quả lưu vào x6 (x6 = x3 >> 5)
+srai x6, x3, 5  # Dịch phải số học x3 5 bit, kết quả lưu vào x6 (x6 = x3 >> 5)
+
+# Các lệnh so sánh với 5 (khi x3 = 7)
+slti x6, x3, 5  # Nếu x3 nhỏ hơn 5 thì x6 = 1, ngược lại x6 = 0 (x6 = x3 < 5)
+sltiu x6, x3, 5 # Nếu x3 nhỏ hơn 5 khi xem cả hai là số không dấu thì x6 = 1, ngược lại x6 = 0 (x6 = x3 < 5 unsigned)
+
+# Thay đổi giá trị của x3 để có kết quả khác
+addi x3, x0, 3  # Gán giá trị 3 cho x3 (x3 = 3)
+
+# Các lệnh so sánh với 5 (khi x3 = 3)
+slti x6, x3, 5  # Nếu x3 nhỏ hơn 5 thì x6 = 1, ngược lại x6 = 0 (x6 = x3 < 5)
+sltiu x6, x3, 5 # Nếu x3 nhỏ hơn 5 khi xem cả hai là số không dấu thì x6 = 1, ngược lại x6 = 0 (x6 = x3 < 5 unsigned)
+
+# Thay đổi giá trị x3 để phân biệt slti và sltiu khi xét giá trị âm:
+# Trường hợp 1: x3 = -3 (số âm, sự khác biệt giữa slti và sltiu)
+addi x3, x0, -3 # Gán giá trị -3 cho x3 (x3 = -3)
+slti x6, x3, 5  # Nếu x3 nhỏ hơn 5 thì x6 = 1, ngược lại x6 = 0 (x6 = x3 < 5)
+sltiu x6, x3, 5 # Nếu x3 nhỏ hơn 5 khi xem cả hai là số không dấu thì x6 = 1, ngược lại x6 = 0 (x6 = x3 < 5 unsigned)

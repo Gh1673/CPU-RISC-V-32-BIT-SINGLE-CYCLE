@@ -1,0 +1,19 @@
+# R type
+addi x5, x0, 5  # Gán giá trị 5 vào thanh ghi x5
+addi x6, x0, 7  # Gán giá trị 7 vào thanh ghi x6
+
+# Các phép toán số học và logic
+add  x10, x5, x6  # Cộng giá trị trong x5 và x6, kết quả lưu vào x10
+sub  x10, x5, x6  # Trừ giá trị trong x6 khỏi x5, kết quả lưu vào x10
+xor  x10, x5, x6  # XOR (hoặc khác) giữa x5 và x6, kết quả lưu vào x10
+or   x10, x5, x6  # OR (hoặc) giữa x5 và x6, kết quả lưu vào x10
+and  x10, x5, x6  # AND (và) giữa x5 và x6, kết quả lưu vào x10
+
+# Các phép dịch chuyển bit
+sll  x10, x5, x6  # Dịch trái số bit trong x5 một số lần bằng giá trị trong x6, kết quả lưu vào x10
+srl  x10, x5, x6  # Dịch phải số bit trong x5 một số lần bằng giá trị trong x6, kết quả lưu vào x10
+sra  x10, x5, x6  # Dịch phải số học số bit trong x5 một số lần bằng giá trị trong x6, kết quả lưu vào x10
+
+# So sánh
+slt  x10, x5, x6  # Nếu x5 nhỏ hơn x6 thì đặt 1 vào x10, ngược lại đặt 0
+sltu x10, x5, x6  # Nếu x5 nhỏ hơn x6 khi xem cả hai là số không dấu thì đặt 1 vào x10, ngược lại đặt 0
